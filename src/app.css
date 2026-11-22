@@ -1,0 +1,71 @@
+/* Dark on purpose: it's an instrument, and it's easier on the eyes in a dim room. */
+:root {
+  color-scheme: dark;
+  --bg: #15171d;
+  --panel: #1e2129;
+  --panel-2: #282c36;
+  --line: #363b47;
+  --text: #f1eee7;
+  --muted: #9a9fad;
+  --accent: #ff7a3d;
+  --accent-strong: #ff9a66;
+  --on-accent: #15171d;
+  --cool: #59b8ff;
+  --focus: #7aa7ff;
+  --key-white: #e9e6df;
+  --key-white-text: #2a2d36;
+  --key-black: #0b0c10;
+  --key-border: #555b68;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Roboto, system-ui, sans-serif;
+  font-size: 15px;
+  -webkit-text-size-adjust: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+select {
+  font: inherit;
+  color: var(--text);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  min-height: 40px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.4;
+}
+button.on,
+button[aria-pressed='true'] {
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: var(--accent-strong);
+}
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.muted {
+  color: var(--muted);
+}
